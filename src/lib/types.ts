@@ -1,4 +1,3 @@
-
 export interface CustomerData {
   firstName: string;
   lastName: string;
@@ -21,6 +20,7 @@ export interface CustomerData {
   storeLocation: string;
   piercerName: string;
   notes: string;
+  signature: string;
 }
 
 export interface Service {

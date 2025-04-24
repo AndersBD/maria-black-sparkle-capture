@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { CustomerData, JewelryOption, PiercingLocation } from '@/lib/types';
 import { Label } from '@/components/ui/label';
@@ -44,10 +43,10 @@ const ServiceSelection: React.FC<ServiceSelectionProps> = ({ data, onChange }) =
   
   return (
     <div className="mb-section">
-      <h2 className="section-title">Piercing Service Details</h2>
+      <h2 className="section-title">Piercing Detaljer</h2>
       
       <div className="form-group">
-        <Label className="block mb-3">Service Type *</Label>
+        <Label className="block mb-3">Vælg Service *</Label>
         <RadioGroup 
           value={data.service || ''} 
           onValueChange={(value) => onChange('service', value)}
@@ -67,7 +66,7 @@ const ServiceSelection: React.FC<ServiceSelectionProps> = ({ data, onChange }) =
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="form-group">
-          <Label htmlFor="jewelryType" className="block mb-2">Jewelry Type *</Label>
+          <Label htmlFor="jewelryType" className="block mb-2">Smykketype *</Label>
           <select
             id="jewelryType"
             value={data.jewelryType || ''}
@@ -75,7 +74,7 @@ const ServiceSelection: React.FC<ServiceSelectionProps> = ({ data, onChange }) =
             className="input-field"
             required
           >
-            <option value="" disabled>Select jewelry type</option>
+            <option value="" disabled>Vælg smykketype</option>
             {jewelryOptions.map((option) => (
               <option key={option.type} value={option.type}>{option.type}</option>
             ))}
@@ -83,7 +82,7 @@ const ServiceSelection: React.FC<ServiceSelectionProps> = ({ data, onChange }) =
         </div>
         
         <div className="form-group">
-          <Label htmlFor="jewelryMaterial" className="block mb-2">Jewelry Material *</Label>
+          <Label htmlFor="jewelryMaterial" className="block mb-2">Smykkemateriale *</Label>
           <select
             id="jewelryMaterial"
             value={data.jewelryMaterial || ''}
@@ -92,7 +91,7 @@ const ServiceSelection: React.FC<ServiceSelectionProps> = ({ data, onChange }) =
             required
             disabled={!data.jewelryType}
           >
-            <option value="" disabled>Select material</option>
+            <option value="" disabled>Vælg materiale</option>
             {data.jewelryType && jewelryOptions
               .find(opt => opt.type === data.jewelryType)?.materials
               .map(material => (
@@ -105,7 +104,7 @@ const ServiceSelection: React.FC<ServiceSelectionProps> = ({ data, onChange }) =
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="form-group">
-          <Label htmlFor="piercingArea" className="block mb-2">Piercing Area *</Label>
+          <Label htmlFor="piercingArea" className="block mb-2">Piercingområde *</Label>
           <select
             id="piercingArea"
             value={selectedLocation}
@@ -113,7 +112,7 @@ const ServiceSelection: React.FC<ServiceSelectionProps> = ({ data, onChange }) =
             className="input-field"
             required
           >
-            <option value="" disabled>Select area</option>
+            <option value="" disabled>Vælg område</option>
             {piercingLocations.map((location) => (
               <option key={location.area} value={location.area}>{location.area}</option>
             ))}
@@ -121,7 +120,7 @@ const ServiceSelection: React.FC<ServiceSelectionProps> = ({ data, onChange }) =
         </div>
         
         <div className="form-group">
-          <Label htmlFor="piercingLocation" className="block mb-2">Piercing Position *</Label>
+          <Label htmlFor="piercingLocation" className="block mb-2">Piercingplacering *</Label>
           <select
             id="piercingLocation"
             value={data.piercingLocation || ''}
@@ -130,7 +129,7 @@ const ServiceSelection: React.FC<ServiceSelectionProps> = ({ data, onChange }) =
             required
             disabled={!selectedLocation}
           >
-            <option value="" disabled>Select position</option>
+            <option value="" disabled>Vælg placering</option>
             {selectedLocation && piercingLocations
               .find(loc => loc.area === selectedLocation)?.positions
               .map(position => (
@@ -143,7 +142,7 @@ const ServiceSelection: React.FC<ServiceSelectionProps> = ({ data, onChange }) =
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="form-group">
-          <Label htmlFor="appointmentDate" className="block mb-2">Appointment Date *</Label>
+          <Label htmlFor="appointmentDate" className="block mb-2">Dato *</Label>
           <Input
             id="appointmentDate"
             type="date"
@@ -155,7 +154,7 @@ const ServiceSelection: React.FC<ServiceSelectionProps> = ({ data, onChange }) =
         </div>
         
         <div className="form-group">
-          <Label htmlFor="appointmentTime" className="block mb-2">Appointment Time *</Label>
+          <Label htmlFor="appointmentTime" className="block mb-2">Tidspunkt *</Label>
           <Input
             id="appointmentTime"
             type="time"
@@ -169,7 +168,7 @@ const ServiceSelection: React.FC<ServiceSelectionProps> = ({ data, onChange }) =
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="form-group">
-          <Label htmlFor="storeLocation" className="block mb-2">Store Location *</Label>
+          <Label htmlFor="storeLocation" className="block mb-2">Butikslokation *</Label>
           <select
             id="storeLocation"
             value={data.storeLocation || ''}
@@ -177,7 +176,7 @@ const ServiceSelection: React.FC<ServiceSelectionProps> = ({ data, onChange }) =
             className="input-field"
             required
           >
-            <option value="" disabled>Select store</option>
+            <option value="" disabled>Vælg butik</option>
             {storeLocations.map((location) => (
               <option key={location.id} value={location.id}>{location.name}</option>
             ))}
@@ -185,7 +184,7 @@ const ServiceSelection: React.FC<ServiceSelectionProps> = ({ data, onChange }) =
         </div>
         
         <div className="form-group">
-          <Label htmlFor="piercerName" className="block mb-2">Piercer Name</Label>
+          <Label htmlFor="piercerName" className="block mb-2">Piercernavn</Label>
           <Input
             id="piercerName"
             type="text"
@@ -197,13 +196,13 @@ const ServiceSelection: React.FC<ServiceSelectionProps> = ({ data, onChange }) =
       </div>
       
       <div className="form-group">
-        <Label htmlFor="notes" className="block mb-2">Additional Notes</Label>
+        <Label htmlFor="notes" className="block mb-2">Yderligere bemærkninger</Label>
         <textarea
           id="notes"
           value={data.notes || ''}
           onChange={(e) => onChange('notes', e.target.value)}
           className="input-field min-h-[100px] resize-y"
-          placeholder="Any special requirements or information..."
+          placeholder="Særlige krav eller information..."
         />
       </div>
     </div>

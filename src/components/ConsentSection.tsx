@@ -12,12 +12,12 @@ interface ConsentSectionProps {
 const ConsentSection: React.FC<ConsentSectionProps> = ({ data, onChange }) => {
   return (
     <div className="mb-section">
-      <h2 className="section-title">Marketing Preferences</h2>
+      <h2 className="section-title">Marketingpræferencer</h2>
       
       <div className="bg-muted p-5 rounded-lg mb-6">
         <p className="text-sm mb-4">
-          Maria Black would love to keep you updated with piercing aftercare information, 
-          exclusive offers, new collections, and events. Please select how you'd like to hear from us:
+          Maria Black vil gerne holde dig opdateret med information om piercing efterpleje, 
+          eksklusive tilbud, nye kollektioner og events. Vælg venligst hvordan du ønsker at høre fra os:
         </p>
         
         <div className="space-y-4">
@@ -29,9 +29,9 @@ const ConsentSection: React.FC<ConsentSectionProps> = ({ data, onChange }) => {
               className="mt-1"
             />
             <div>
-              <Label htmlFor="emailConsent" className="font-medium">Email Updates</Label>
+              <Label htmlFor="emailConsent" className="font-medium">Email opdateringer</Label>
               <p className="text-sm text-muted-foreground">
-                Receive styling tips, exclusive offers, and new collection announcements.
+                Modtag styling tips, eksklusive tilbud og nyheder om nye kollektioner.
               </p>
             </div>
           </div>
@@ -44,9 +44,9 @@ const ConsentSection: React.FC<ConsentSectionProps> = ({ data, onChange }) => {
               className="mt-1"
             />
             <div>
-              <Label htmlFor="smsConsent" className="font-medium">SMS Notifications</Label>
+              <Label htmlFor="smsConsent" className="font-medium">SMS notifikationer</Label>
               <p className="text-sm text-muted-foreground">
-                Get text alerts for appointments, exclusive deals, and in-store events.
+                Få SMS beskeder om aftaler, eksklusive tilbud og butiksevents.
               </p>
             </div>
           </div>
@@ -59,11 +59,11 @@ const ConsentSection: React.FC<ConsentSectionProps> = ({ data, onChange }) => {
               className="mt-1"
             />
             <div>
-              <Label htmlFor="marketingConsent" className="font-medium">General Marketing Consent</Label>
+              <Label htmlFor="marketingConsent" className="font-medium">Generelt marketingsamtykke</Label>
               <p className="text-sm text-muted-foreground">
-                I agree that Maria Black may process my personal data to provide personalized marketing 
-                communications in accordance with the <a href="#" className="underline">Privacy Policy</a>. 
-                I understand I can unsubscribe at any time.
+                Jeg accepterer, at Maria Black må behandle mine personlige oplysninger for at sende
+                personlig markedsføring i henhold til <a href="#" className="underline">Privatlivspolitikken</a>. 
+                Jeg forstår, at jeg til enhver tid kan framelde mig.
               </p>
             </div>
           </div>

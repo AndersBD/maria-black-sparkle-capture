@@ -19,28 +19,28 @@ const FormSuccess: React.FC<FormSuccessProps> = ({ data, onReset }) => {
           </svg>
         </div>
         
-        <h2 className="text-2xl font-display font-semibold mb-2">Registration Complete</h2>
+        <h2 className="text-2xl font-display font-semibold mb-2">Registrering Gennemført</h2>
         <p className="text-muted-foreground mb-6">
-          Thank you for registering with Maria Black Piercing Studio
+          Tak for din registrering hos Maria Black
         </p>
       </div>
       
       <div className="max-w-md mx-auto bg-muted p-6 rounded-lg text-left mb-8">
-        <h3 className="font-semibold mb-3 text-lg">Appointment Summary</h3>
+        <h3 className="font-semibold mb-3 text-lg">Aftaleoversigt</h3>
         <div className="space-y-2">
-          <p><span className="font-medium">Name:</span> {data.firstName} {data.lastName}</p>
+          <p><span className="font-medium">Navn:</span> {data.firstName} {data.lastName}</p>
           <p><span className="font-medium">Service:</span> {data.service}</p>
-          <p><span className="font-medium">Date & Time:</span> {data.appointmentDate} at {data.appointmentTime}</p>
-          <p><span className="font-medium">Piercing:</span> {data.piercingLocation} with {data.jewelryType} ({data.jewelryMaterial})</p>
+          <p><span className="font-medium">Dato & tid:</span> {data.appointmentDate} kl. {data.appointmentTime}</p>
+          <p><span className="font-medium">Piercing:</span> {data.piercingLocation} med {data.jewelryType} ({data.jewelryMaterial})</p>
         </div>
       </div>
       
       {(data.emailConsent || data.smsConsent) && (
         <div className="mb-8">
           <p className="text-sm">
-            {data.emailConsent && 'You will receive email updates from Maria Black. '}
-            {data.smsConsent && 'You will receive SMS notifications from Maria Black. '}
-            You can unsubscribe at any time.
+            {data.emailConsent && 'Du vil modtage email opdateringer fra Maria Black. '}
+            {data.smsConsent && 'Du vil modtage SMS beskeder fra Maria Black. '}
+            Du kan til enhver tid framelde dig.
           </p>
         </div>
       )}
@@ -51,7 +51,7 @@ const FormSuccess: React.FC<FormSuccessProps> = ({ data, onReset }) => {
           variant="outline" 
           className="px-8"
         >
-          Register Another Customer
+          Registrer En Ny Kunde
         </Button>
       </div>
     </div>
