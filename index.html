@@ -3,24 +3,159 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>maria-black-sparkle-capture</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+    <title>Maria Black - Piercing Registration</title>
+    <meta name="description" content="Maria Black Piercing Customer Registration System" />
+    <meta name="author" content="Maria Black" />
 
-    <meta property="og:title" content="maria-black-sparkle-capture" />
-    <meta property="og:description" content="Lovable Generated Project" />
+    <meta property="og:title" content="Maria Black - Piercing Registration" />
+    <meta property="og:description" content="Register for piercing services at Maria Black" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta property="og:image" content="/maria-black-preview.svg" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta name="twitter:image" content="/maria-black-preview.svg" />
+    
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <style>
+      .preview-container {
+        display: none;
+      }
+      
+      @media (max-width: 0px) { /* This ensures it's not displayed in normal view */
+        .preview-container {
+          display: block;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 2rem;
+          font-family: 'Montserrat', sans-serif;
+        }
+        
+        .preview-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1px solid #eaeaea;
+          padding-bottom: 1rem;
+          margin-bottom: 2rem;
+        }
+        
+        .preview-logo {
+          font-size: 1.75rem;
+          font-weight: 600;
+          letter-spacing: -0.025em;
+        }
+        
+        .preview-form {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1.5rem;
+          margin-bottom: 2rem;
+        }
+        
+        .preview-form-group {
+          display: flex;
+          flex-direction: column;
+        }
+        
+        .preview-label {
+          font-weight: 500;
+          margin-bottom: 0.5rem;
+        }
+        
+        .preview-input {
+          padding: 0.75rem;
+          border: 1px solid #eaeaea;
+          border-radius: 0.3rem;
+        }
+        
+        .preview-button {
+          background-color: #333333;
+          color: white;
+          padding: 0.75rem 2rem;
+          border: none;
+          border-radius: 0.3rem;
+          font-weight: 500;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        
+        .preview-footer {
+          border-top: 1px solid #eaeaea;
+          padding-top: 1rem;
+          margin-top: 2rem;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    </style>
   </head>
 
   <body>
+    <!-- Preview for link sharing (not visible in actual app) -->
+    <div class="preview-container">
+      <div class="preview-header">
+        <div class="preview-logo">MARIA BLACK</div>
+        <div>
+          <p>Kunderegisterering</p>
+          <p>Piercingservice</p>
+        </div>
+      </div>
+      
+      <div>
+        <h2>Kundeinformation</h2>
+        <div class="preview-form">
+          <div class="preview-form-group">
+            <label class="preview-label">Fornavn *</label>
+            <input class="preview-input" type="text" placeholder="Fornavn" />
+          </div>
+          <div class="preview-form-group">
+            <label class="preview-label">Efternavn *</label>
+            <input class="preview-input" type="text" placeholder="Efternavn" />
+          </div>
+          <div class="preview-form-group">
+            <label class="preview-label">Email *</label>
+            <input class="preview-input" type="email" placeholder="Email" />
+          </div>
+          <div class="preview-form-group">
+            <label class="preview-label">Telefonnummer *</label>
+            <input class="preview-input" type="tel" placeholder="Telefonnummer" />
+          </div>
+        </div>
+        
+        <h2>Piercing Detaljer</h2>
+        <div class="preview-form">
+          <div class="preview-form-group">
+            <label class="preview-label">Service *</label>
+            <select class="preview-input">
+              <option>Single Piercing</option>
+              <option>Double Piercing</option>
+              <option>Triple Piercing</option>
+            </select>
+          </div>
+          <div class="preview-form-group">
+            <label class="preview-label">Dato *</label>
+            <input class="preview-input" type="date" />
+          </div>
+        </div>
+        
+        <div style="display: flex; justify-content: center; margin-top: 2rem;">
+          <button class="preview-button">Færdiggør bestilling</button>
+        </div>
+      </div>
+      
+      <div class="preview-footer">
+        <div>© 2024 Maria Black. All rights reserved.</div>
+        <div>
+          <a href="#">Privacy Policy</a> | 
+          <a href="#">Terms of Service</a> | 
+          <a href="https://www.maria-black.com/dk/">Shop Online</a>
+        </div>
+      </div>
+    </div>
+    
     <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
